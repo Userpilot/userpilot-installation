@@ -17,7 +17,7 @@ export class AppComponent {
         if (event instanceof NavigationEnd) {
             // Hide loading indicator
             console.log('[Call userpilot reload]');
-            window.userpilot.reload();
+            window?.userpilot?.reload();
         }
 
         if (event instanceof NavigationError) {
