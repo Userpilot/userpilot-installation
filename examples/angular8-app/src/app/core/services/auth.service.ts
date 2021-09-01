@@ -34,6 +34,20 @@ export class AuthenticationService {
                     fullName: email.split('@')[0]
                 }));
 
+                console.log('[ Call Userpilot Identify ]');
+                // Call Userpilot upon login or on check authentication
+                window.userpilot.identify( 
+                    email.split('@')[0], // Used to identify users 
+                    { 
+                         name: email.split('@')[0], // Full name 
+                         email: email, // Email address 
+                         created_at: "1519205055" // Signup date as a Unix timestamp 
+                        // Additional user properties 
+                        // projectId: "1"
+                        // trialEnds: '2019-10-31T09:29:33.401Z'
+                    }     
+                  );
+                
                 return true;
             }));
     }

@@ -55,13 +55,14 @@ export class LoginComponent implements OnInit {
                     } else {
                         localStorage.removeItem('savedUserEmail');
                     }
+
                     this.router.navigate(['/']);
                 },
                 error => {
                     this.notificationService.openSnackBar(error.error);
                     this.loading = false;
                 }
-            );
+            )
     }
 
     resetPassword() {

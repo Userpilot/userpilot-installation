@@ -12,13 +12,12 @@ export class AppComponent {
     this.router.events.subscribe((event: Event) => {
         if (event instanceof NavigationStart) {
             // Show loading indicator
-            console.log('Reload Route');
-
-            console.log('@Call userpilot reload!');
         }
 
         if (event instanceof NavigationEnd) {
             // Hide loading indicator
+            console.log('[Call userpilot reload]');
+            window.userpilot.reload();
         }
 
         if (event instanceof NavigationError) {
