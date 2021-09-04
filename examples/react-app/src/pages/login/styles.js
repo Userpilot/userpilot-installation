@@ -134,9 +134,7 @@ export default makeStyles(theme => ({
     textTransform: "none",
     fontWeight: 400,
   },
-  loginLoader: {
-    marginLeft: theme.spacing(4),
-  },
+  loginLoader: {},
   copyright: {
     marginTop: theme.spacing(4),
     whiteSpace: "nowrap",
