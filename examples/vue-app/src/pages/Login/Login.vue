@@ -89,10 +89,10 @@ export default {
     login() {
       window.localStorage.setItem("authenticated", true);
 
-      console.info("[Userpilot] Userpilot.identify()");
-      console.warn(
-        "[Userpilot] Replace {456987} with the logged in user identifier"
-      );
+      console.groupCollapsed('[Userpilot] Identify')
+      console.info("call `Userpilot.identify()` after login");
+      console.log("Replace {4321984} with the logged in user identifier");
+      console.groupEnd();
 
       // Identify User on Userpilot
       Userpilot.identify("4321984", {
