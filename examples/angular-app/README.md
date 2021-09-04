@@ -1,3 +1,6 @@
+# AngularJS Example
 
-# [Userpilot Installation Instructions]
-**Angular 8 SPA**
+```sh
+yarn install
+yarn start
+```
