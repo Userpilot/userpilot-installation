@@ -4,11 +4,11 @@ This reposotry includes a real examples of SPA, and SSR apps that uses `Userpilo
 
 ## Apps
 - Single Page Applications
--- AngularJS App
--- ReactJS App
--- VueJS App
+  - AngularJS App
+  - ReactJS App
+  - VueJS App
 - Server Side Renderd Applications
--- Laravel App
+  - Laravel App
 
 ## Run the examples
 
