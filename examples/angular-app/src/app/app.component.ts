@@ -26,14 +26,16 @@ export class AppComponent {
   ) {
     const token = localStorage.getItem('token');
     if(token){
-      console.info('[Userpilot] Userpilot.identify()');
-      console.warn('[Userpilot] Replace {userId} with the logged in user identifier');
       this.userService.getUser().subscribe((user) => {
         if(user.id){
+
+          console.info('[Userpilot] Userpilot.identify()');
+          console.warn('[Userpilot] Replace {userId} with the logged in user identifier');
+    
           Userpilot.identify(user.id,{
             name: user.name,
-            email: 'john@site-domain.com',
-            created_at: new Date(),
+            email: user.email,
+            created_at: user.created_at,
           });
         }
         

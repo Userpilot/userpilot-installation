@@ -11,7 +11,8 @@
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "tinycolor2": "^1.4.2"
+    "tinycolor2": "^1.4.2",
+    "userpilot": "^1.2.4"
   },
   "scripts": {
     "start": "react-scripts start",

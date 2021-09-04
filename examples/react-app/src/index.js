@@ -8,13 +8,25 @@ import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { LayoutProvider } from "./context/LayoutContext";
 import { UserProvider } from "./context/UserContext";
+import { BrowserRouter } from "react-router-dom";
+
+import {Userpilot} from 'userpilot';
+
+
+// Initialize Userpilot
+console.info('[Userpilot] Initialize');
+console.warn('[Userpilot] Replace {AppToken} with your AppToken');
+Userpilot.initialize('{AppToken}');
+
 
 ReactDOM.render(
   <LayoutProvider>
     <UserProvider>
       <ThemeProvider theme={Themes.default}>
-        <CssBaseline />
-        <App />
+        <BrowserRouter>
+          <CssBaseline />
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </UserProvider>
   </LayoutProvider>,

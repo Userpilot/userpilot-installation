@@ -19,7 +19,7 @@ export class AuthService {
       Userpilot.identify(user.id,{
         name: user.name,
         email: user.email,
-        created_at: new Date(),
+        created_at: user.created_at,
       });
     });
   }
@@ -37,6 +37,7 @@ export class AuthService {
       name: 'John Doe',
       id: '123987',
       email: 'john@site-domain.com',
+      created_at: '2018-07-11',
     });
   }
 }
