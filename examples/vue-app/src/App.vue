@@ -11,7 +11,7 @@ export default {
     if (localStorage.getItem("authenticated") === "true") {
       console.groupCollapsed('[Userpilot] Identify')
       console.info("call `Userpilot.identify()`");
-      console.log("Replace {456987} with the logged in user identifier");
+      console.log("Replace {4321984} with the logged in user identifier");
       console.groupEnd();
       Userpilot.identify("4321984", {
         name: "John Doe",
