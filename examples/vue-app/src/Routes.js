@@ -11,6 +11,20 @@ import Notifications from '@/pages/Notifications/Notifications'
 import Error from "@/pages/Error/Error";
 import Login from "@/pages/Login/Login";
 
+
+
+export const authenticationGuard = (to, from, next) => {
+  const authenticated = localStorage.getItem('authenticated');
+
+  if (authenticated === 'true') {
+    return next();
+  } else {
+    return next('/login')
+  }
+  
+};
+
+
 Vue.use(Router);
 
 export default new Router({
@@ -22,33 +36,37 @@ export default new Router({
       component: Login
     },
     {
-    path: '/',
-    redirect: 'login',
-    name: 'Layout',
-    component: Layout,
-    children: [
-      {
-        path: 'dashboard',
-        name: 'Dashboard',
-        component: Dashboard,
-      },
-      {
-        path: 'typography',
-        name: 'Typography',
-        component: Typography,
-      },
-      {
-        path: 'tables',
-        name: 'Tables',
-        component: Tables
-      },
-      {
-        path: 'notifications',
-        name: 'Notifications',
-        component: Notifications
-      },
-    ],
-  },
+      path: '/',
+      redirect: 'login',
+      name: 'Layout',
+      component: Layout,
+      children: [
+        {
+          path: 'dashboard',
+          name: 'Dashboard',
+          component: Dashboard,
+          beforeEnter: authenticationGuard,
+        },
+        {
+          path: 'typography',
+          name: 'Typography',
+          component: Typography,
+          beforeEnter: authenticationGuard,
+        },
+        {
+          path: 'tables',
+          name: 'Tables',
+          component: Tables,
+          beforeEnter: authenticationGuard,
+        },
+        {
+          path: 'notifications',
+          name: 'Notifications',
+          component: Notifications,
+          beforeEnter: authenticationGuard,
+        },
+      ],
+    },
     {
       path: '*',
       name: 'Error',

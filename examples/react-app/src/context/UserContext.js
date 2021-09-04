@@ -55,10 +55,13 @@ function loginUser(dispatch, login, password, history, setIsLoading, setError) {
 
   if (!!login && !!password) {
     setTimeout(() => {
-      localStorage.setItem('id_token', 1)
-      setError(null)
-      setIsLoading(false)
-      dispatch({ type: 'LOGIN_SUCCESS' })
+      localStorage.setItem('id_token', 1);
+      setError(null);
+      setIsLoading(false);
+
+      Userpilot.identify();
+
+      dispatch({ type: 'LOGIN_SUCCESS' });
 
       history.push('/app/dashboard')
     }, 2000);

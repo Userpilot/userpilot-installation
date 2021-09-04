@@ -37,6 +37,8 @@ export default {
 
   data: () => ({
     config,
+    links: [],
+    icons: [],
   }),
 }
 </script>

@@ -18,6 +18,7 @@
     export default {
         name: 'Layout',
         components: {Footer, Header, Sidebar },
+        
     };
 </script>
 
