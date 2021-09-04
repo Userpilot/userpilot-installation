@@ -23,7 +23,7 @@ yarn start
 ### ReactJS
 Navigate to the app directory, Install the needed depndencies, and run the application.
 ```sh
-cd examples/angular-app
+cd examples/react-app
 yarn install
 yarn start
 ```
@@ -31,7 +31,7 @@ yarn start
 ### VueJS
 Navigate to the app directory, Install the needed depndencies, and run the application.
 ```sh
-cd examples/angular-app
+cd examples/vue-app
 yarn install
 yarn start
 ```
