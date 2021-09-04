@@ -29,10 +29,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
     AppRoutingModule,
     ToastrModule.forRoot(),
     MatCardModule,
-    MatButtonModule,
-    NgxEchartsModule.forRoot({
-      echarts: () => import('echarts')
-    })
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
