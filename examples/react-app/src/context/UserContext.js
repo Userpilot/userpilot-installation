@@ -1,4 +1,5 @@
 import React from "react";
+import { Userpilot } from "userpilot";
 
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
