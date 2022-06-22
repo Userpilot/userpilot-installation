@@ -1,6 +1,11 @@
-# Userpilot Installation Demos
+# ⚠️ DISCLAIMER
+This repo contains example code on how to integrate Userpilot using popular frameworks, and is not intended for production use.
+We recommend that you always seek latest stable versions of frameworks when they are available.
 
-This reposotry includes a real examples of SPA, and SSR apps that uses `Userpilot` scripts to track users experience and onboarding flows.
+
+# Demo
+
+This is a simple guide of getting started. This reposotry includes examples of how to setup and use `Userpilot` scripts on different web applications (SPA, and SSR).
 
 ## Apps
 - Single Page Applications
