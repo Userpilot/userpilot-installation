@@ -1,8 +1,3 @@
-# ⚠️ DISCLAIMER
-This repo contains example code on how to integrate Userpilot using popular frameworks, and is not intended for production use.
-We recommend that you always seek latest stable versions of frameworks when they are available.
-
-
 # Demo
 
 This is a simple guide of getting started. This reposotry includes examples of how to setup and use `Userpilot` scripts on different web applications (SPA, and SSR).
@@ -40,3 +35,18 @@ cd examples/vue-app
 yarn install
 yarn start
 ```
+
+## Server Side Renderd Applications
+
+### Laravel Example
+
+```sh
+composer install
+php artisan key:generate
+php artisan serve
+```
+
+
+# DISCLAIMER
+This repo contains example code on how to integrate Userpilot using popular frameworks, and is not intended for production use.
+We recommend that you always seek latest stable versions of frameworks when they are available.
